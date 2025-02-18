@@ -1,1 +1,32 @@
-Hello, Git!
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Type a number</h1>
+        <input type="number" placeholder="input a number" id="inputNumber">
+        <button onclick="clickOnbtn()">Check</button>
+        <p class="result" id="result"></p>
+    </div>
+    <script>
+        function clickOnbtn(){
+            const inputNumber=document.getElementById('inputNumber').value;
+            const showResult=document.getElementById('result');
+            if (inputNumber === ""){
+                showResult.textContent="please inter a number!";
+            }
+            else if(inputNumber % 2 ===0){
+                showResult.textContent =  `the number ${inputNumber} is even`;
+            } else {
+                showResult.textContent= `the number ${inputNumber} is odd`;
+            }
+
+        }
+    </script>
+</body>
+</html>
